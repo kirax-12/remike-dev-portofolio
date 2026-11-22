@@ -264,3 +264,121 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   .project { padding: 20px; }
   .hero-actions .btn { flex: 1 1 auto; text-align: center; }
 }
+
+/* === Rombakan v2: gaya referensi (strip warna, pill, maskot, filter, grid) === */
+:root { --navy: #16235c; --cyan: #56ccf2; }
+.site-header { background: var(--blue); padding: 12px 24px; }
+.site-nav { gap: 10px; }
+.site-nav a {
+  background: var(--surface);
+  border: var(--border);
+  border-radius: 999px;
+  padding: 6px 16px;
+  box-shadow: var(--shadow-sm);
+}
+.site-nav a:hover { background: var(--yellow); border-radius: 999px; }
+.hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+.name-block {
+  display: inline-block;
+  background: #2456e6;
+  color: #fff;
+  border: var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 2px 18px 6px;
+  transform: rotate(-1.2deg);
+  margin-top: 10px;
+}
+.role-pill {
+  display: inline-block;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  padding: 9px 20px;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 4px 0 18px;
+}
+.mascot-card { transform: rotate(2deg); }
+.mascot-frame {
+  position: relative;
+  background: var(--blue);
+  border: var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+.mascot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg);
+  border: var(--border);
+  border-radius: 14px;
+}
+.mascot-sticker {
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: var(--yellow);
+  border: var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 0.9rem;
+  padding: 7px 16px;
+  white-space: nowrap;
+}
+.mascot-dot {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  width: 38px;
+  height: 38px;
+  background: var(--pink);
+  border: var(--border);
+  border-radius: 50%;
+}
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 6px; }
+.filters .chip {
+  font: inherit;
+  font-weight: 700;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: 999px;
+  padding: 7px 18px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+.filters .chip:hover { background: var(--blue); }
+.filters .chip.active { background: var(--ink); color: var(--bg); }
+.project-count { font-family: "Space Mono", ui-monospace, monospace; font-size: 0.88rem; margin: 8px 0 18px; }
+.project-list { grid-template-columns: repeat(auto-fill, minmax(325px, 1fr)); align-items: stretch; }
+.project { display: flex; flex-direction: column; }
+.project .project-links { margin-top: auto; padding-top: 16px; }
+.project-featured { grid-column: span 2; }
+.skills-band {
+  background: var(--navy);
+  border: var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 34px 30px;
+  margin-top: 64px;
+}
+.skills-band h2 { color: #fff; }
+.skills-band .section-sub { color: var(--yellow); }
+.skills-band .skill-grid li { background: #1f3180; color: #fff; border-color: #000; }
+.skills-band .skill-grid li span { color: #c9d4ff; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .mascot-card { max-width: 380px; margin: 10px auto 0; }
+  .project-featured { grid-column: span 1; }
+}
+@media (max-width: 640px) {
+  .site-nav a { padding: 5px 11px; font-size: 0.88rem; }
+  .project-list { grid-template-columns: 1fr; }
+}

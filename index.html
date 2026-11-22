@@ -14,6 +14,7 @@
 <header class="site-header">
   <a class="brand" href="#top">Remike<span>Dev</span></a>
   <nav class="site-nav" aria-label="Navigasi utama">
+    <a href="#top">Beranda</a>
     <a href="#proyek">Proyek</a>
     <a href="#keahlian">Keahlian</a>
     <a href="#tentang">Tentang</a>
@@ -24,26 +25,47 @@
 
 <main id="top">
   <section class="hero">
-    <p class="hero-kicker">Wiranata Sutoyo — Indonesia</p>
-    <h1>Membangun aplikasi desktop dan web yang <span class="hl">dipakai beneran.</span></h1>
-    <p class="hero-sub">Saya developer di balik <strong>Kirax Spoof</strong>, aplikasi desktop untuk kreator Roblox Studio. Fokus saya: tool yang cepat, praktis, dan selesai sampai rilis — bukan sekadar demo.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#proyek">Lihat proyek</a>
-      <a class="btn btn-ghost" href="https://github.com/kirax-12" target="_blank" rel="noopener">GitHub: kirax-12</a>
+    <div class="hero-text">
+      <p class="hero-kicker">👋 Halo, saya Wiranata Sutoyo</p>
+      <h1>Developer di balik<br><span class="name-block">REMIKE DEV</span></h1>
+      <p class="role-pill">⌨ Web &amp; Desktop Developer — Indonesia</p>
+      <p class="hero-sub">Saya membangun aplikasi desktop dan web yang <strong>dipakai beneran</strong> — dari Kirax Spoof untuk kreator Roblox Studio sampai 27 tool web yang semuanya bisa kamu coba langsung. Fokus saya: cepat, praktis, dan selesai sampai rilis.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#proyek">Lihat proyek</a>
+        <a class="btn btn-ghost" href="https://github.com/kirax-12" target="_blank" rel="noopener">GitHub: kirax-12</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>Proyek jadi</dt><dd>28 proyek</dd></div>
+        <div><dt>Demo live</dt><dd>27 situs online</dd></div>
+        <div><dt>Status</dt><dd>Terbuka untuk proyek baru</dd></div>
+      </dl>
     </div>
-    <dl class="hero-stats">
-      <div><dt>Stack utama</dt><dd>Tauri · Rust · React</dd></div>
-      <div><dt>Proyek unggulan</dt><dd>Kirax Spoof v2.8</dd></div>
-      <div><dt>Status</dt><dd>Terbuka untuk proyek baru</dd></div>
-    </dl>
+    <div class="mascot-card" aria-hidden="true">
+      <div class="mascot-frame">
+        <img src="maskot.png" alt="" width="640" height="640">
+        <span class="mascot-sticker">WEB DEVELOPER ✦</span>
+        <span class="mascot-dot"></span>
+      </div>
+    </div>
   </section>
 
   <section id="proyek" class="section">
     <h2>Proyek</h2>
     <span class="section-sub">yang udah jadi, bukan wacana ↓</span>
+    
+    <div class="filters" id="filters" role="group" aria-label="Filter kategori proyek">
+      <button class="chip active" type="button" data-filter="semua">Semua</button>
+      <button class="chip" type="button" data-filter="tools">Tools</button>
+      <button class="chip" type="button" data-filter="kalkulator">Kalkulator</button>
+      <button class="chip" type="button" data-filter="devtools">DevTools</button>
+      <button class="chip" type="button" data-filter="web">Web</button>
+      <button class="chip" type="button" data-filter="game">Game</button>
+      <button class="chip" type="button" data-filter="desktop">Desktop</button>
+    </div>
+    <p class="project-count" id="project-count"></p>
     <div class="project-list">
 
-      <article class="project project-featured">
+      <article class="project project-featured" data-cat="desktop">
         <div class="project-head">
           <h3>Kirax Spoof</h3>
           <span class="tag">Aplikasi Desktop</span>
@@ -57,8 +79,80 @@
         <p class="project-meta">Rust · TypeScript · React · Tauri · Vite</p>
         <a class="project-link" href="https://github.com/kirax-12/KiraxSpoof" target="_blank" rel="noopener">Buka repository →</a>
       </article>
+      <article class="project" data-cat="tools">
+        <div class="project-head">
+          <h3>Pembuat Twibbon</h3>
+          <span class="tag">Tools</span>
+        </div>
+        <p>Pasang foto ke frame twibbon langsung di browser: pilih frame bawaan (merah putih, ulang tahun, wisuda) atau upload frame PNG dari panitia, geser dan zoom foto sampai pas, lalu unduh PNG 1080×1080. Tanpa watermark.</p>
+        <p class="project-meta">JavaScript · Canvas API</p>
+        <div class="project-links">
+          <a class="project-link demo" href="https://kirax-12.github.io/pembuat-twibbon/" target="_blank" rel="noopener">Lihat proyek →</a>
+          <a class="project-link" href="https://github.com/kirax-12/pembuat-twibbon" target="_blank" rel="noopener">Buka repository →</a>
+        </div>
+      </article>
+      <article class="project" data-cat="kalkulator">
+        <div class="project-head">
+          <h3>Kalkulator Weton</h3>
+          <span class="tag">Kalkulator</span>
+        </div>
+        <p>Cek weton Jawa dari tanggal lahir: hari + pasaran, neptu, watak menurut primbon, umur detail sampai ke hari, total hari hidup, zodiak, dan hitung mundur ulang tahun berikutnya. Jangkarnya hari Proklamasi: Jumat Legi.</p>
+        <p class="project-meta">JavaScript</p>
+        <div class="project-links">
+          <a class="project-link demo" href="https://kirax-12.github.io/kalkulator-weton/" target="_blank" rel="noopener">Lihat proyek →</a>
+          <a class="project-link" href="https://github.com/kirax-12/kalkulator-weton" target="_blank" rel="noopener">Buka repository →</a>
+        </div>
+      </article>
+      <article class="project" data-cat="kalkulator">
+        <div class="project-head">
+          <h3>Kalkulator Gaji Bersih</h3>
+          <span class="tag">Kalkulator</span>
+        </div>
+        <p>Hitung take home pay karyawan Indonesia: potongan BPJS Kesehatan dan Ketenagakerjaan, PPh 21 untuk 8 status PTKP, rincian tahunan yang transparan (biaya jabatan, PKP, pajak setahun), plus pajak THR.</p>
+        <p class="project-meta">JavaScript</p>
+        <div class="project-links">
+          <a class="project-link demo" href="https://kirax-12.github.io/kalkulator-gaji/" target="_blank" rel="noopener">Lihat proyek →</a>
+          <a class="project-link" href="https://github.com/kirax-12/kalkulator-gaji" target="_blank" rel="noopener">Buka repository →</a>
+        </div>
+      </article>
+      <article class="project" data-cat="devtools">
+        <div class="project-head">
+          <h3>Generator README</h3>
+          <span class="tag">DevTools</span>
+        </div>
+        <p>Bikin README.md GitHub dalam semenit: isi form nama proyek, fitur, dan teknologi — keluar markdown rapi dengan pratinjau langsung ala GitHub, tombol salin, dan unduh file jadi.</p>
+        <p class="project-meta">JavaScript</p>
+        <div class="project-links">
+          <a class="project-link demo" href="https://kirax-12.github.io/readme-generator/" target="_blank" rel="noopener">Lihat proyek →</a>
+          <a class="project-link" href="https://github.com/kirax-12/readme-generator" target="_blank" rel="noopener">Buka repository →</a>
+        </div>
+      </article>
+      <article class="project" data-cat="devtools">
+        <div class="project-head">
+          <h3>Data Dummy Indonesia</h3>
+          <span class="tag">DevTools</span>
+        </div>
+        <p>Generator data fiktif khas Indonesia buat testing aplikasi: nama, email, nomor HP, alamat RT/RW, kota, pekerjaan, perusahaan. Sampai 1.000 baris, ekspor JSON atau CSV.</p>
+        <p class="project-meta">JavaScript</p>
+        <div class="project-links">
+          <a class="project-link demo" href="https://kirax-12.github.io/data-dummy-generator/" target="_blank" rel="noopener">Lihat proyek →</a>
+          <a class="project-link" href="https://github.com/kirax-12/data-dummy-generator" target="_blank" rel="noopener">Buka repository →</a>
+        </div>
+      </article>
+      <article class="project" data-cat="tools">
+        <div class="project-head">
+          <h3>Cek Nomor HP</h3>
+          <span class="tag">Tools</span>
+        </div>
+        <p>Tempel nomor asing yang nelpon: formatnya dibereskan ke +62, operatornya dikenali (Telkomsel, Indosat, XL, Tri, Smartfren), lalu cek pemiliknya lewat WhatsApp, Truecaller, dan Google sekali klik.</p>
+        <p class="project-meta">JavaScript</p>
+        <div class="project-links">
+          <a class="project-link demo" href="https://kirax-12.github.io/cek-nomor-hp/" target="_blank" rel="noopener">Lihat proyek →</a>
+          <a class="project-link" href="https://github.com/kirax-12/cek-nomor-hp" target="_blank" rel="noopener">Buka repository →</a>
+        </div>
+      </article>
 
-      <article class="project">
+      <article class="project" data-cat="web">
         <div class="project-head">
           <h3>kirax-AI</h3>
           <span class="tag">Eksperimen</span>
@@ -71,7 +165,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="web">
         <div class="project-head">
           <h3>Catatan Pengeluaran</h3>
           <span class="tag">Web App</span>
@@ -84,7 +178,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="web">
         <div class="project-head">
           <h3>Dashboard Cuaca</h3>
           <span class="tag">Web App</span>
@@ -97,7 +191,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="web">
         <div class="project-head">
           <h3>Landing Page Kedai Kopi</h3>
           <span class="tag">Landing Page</span>
@@ -110,7 +204,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="kalkulator">
         <div class="project-head">
           <h3>Kalkulator Impian</h3>
           <span class="tag">Kalkulator Viral</span>
@@ -123,7 +217,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>TikTok Downloader</h3>
           <span class="tag">Tools</span>
@@ -136,7 +230,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>Kompres Gambar</h3>
           <span class="tag">Tools</span>
@@ -149,7 +243,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>PDF Tools</h3>
           <span class="tag">Tools</span>
@@ -162,7 +256,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>QR Generator</h3>
           <span class="tag">Tools</span>
@@ -175,7 +269,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>Screenshot Beautifier</h3>
           <span class="tag">Tools</span>
@@ -188,7 +282,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="devtools">
         <div class="project-head">
           <h3>DevTools Suite</h3>
           <span class="tag">DevTools</span>
@@ -201,7 +295,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="web">
         <div class="project-head">
           <h3>Catatan Markdown</h3>
           <span class="tag">Web App</span>
@@ -214,7 +308,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>Meme Generator</h3>
           <span class="tag">Tools</span>
@@ -227,7 +321,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="game">
         <div class="project-head">
           <h3>Tes Kecepatan Ngetik</h3>
           <span class="tag">Game</span>
@@ -240,7 +334,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>Spin Wheel</h3>
           <span class="tag">Tools</span>
@@ -253,7 +347,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>YouTube Thumbnail Downloader</h3>
           <span class="tag">Tools</span>
@@ -266,7 +360,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>Konverter Mata Uang</h3>
           <span class="tag">Tools</span>
@@ -279,7 +373,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="tools">
         <div class="project-head">
           <h3>Pembuat Link WhatsApp</h3>
           <span class="tag">Tools</span>
@@ -292,7 +386,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="kalkulator">
         <div class="project-head">
           <h3>Kalkulator KPR</h3>
           <span class="tag">Kalkulator</span>
@@ -305,7 +399,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="devtools">
         <div class="project-head">
           <h3>Color Palette Generator</h3>
           <span class="tag">DevTools</span>
@@ -318,7 +412,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project" data-cat="web">
         <div class="project-head">
           <h3>Website Portofolio</h3>
           <span class="tag">Web</span>
@@ -331,7 +425,7 @@
     </div>
   </section>
 
-  <section id="keahlian" class="section">
+  <section id="keahlian" class="section skills-band">
     <h2>Keahlian</h2>
     <span class="section-sub">yang kepakai sehari-hari ↓</span>
     <ul class="skill-grid">
