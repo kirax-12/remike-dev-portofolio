@@ -413,6 +413,26 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   font-weight: 700;
   font-size: 0.88rem;
 }
+.case-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 18px;
+}
+.case-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+.case-gallery a { display: block; }
+.case-gallery img {
+  display: block;
+  width: 100%;
+  height: 118px;
+  object-fit: cover;
+  object-position: top;
+  border: var(--border);
+  border-radius: 10px;
+}
 .cc-blue { background: var(--blue); }
 .cc-green { background: var(--green); }
 .cc-pink { background: var(--pink); }
