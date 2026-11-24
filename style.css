@@ -382,3 +382,39 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   .site-nav a { padding: 5px 11px; font-size: 0.88rem; }
   .project-list { grid-template-columns: 1fr; }
 }
+
+/* === Studi kasus: sampul tipografi untuk kartu dari Figma === */
+.case-cover {
+  border: var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  transform: rotate(-0.6deg);
+}
+.case-cover .cc-kicker {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+}
+.case-cover .cc-title {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 5px 0;
+}
+.case-cover .cc-stat {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.cc-blue { background: var(--blue); }
+.cc-green { background: var(--green); }
+.cc-pink { background: var(--pink); }
+.cc-orange { background: var(--orange); }
+.cc-yellow { background: var(--yellow); }
